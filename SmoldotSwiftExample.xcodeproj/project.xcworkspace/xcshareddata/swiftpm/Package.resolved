@@ -1,0 +1,33 @@
+{
+  "originHash" : "5969a3710517bd93deb95382e441c78a3a3334f52f7daaecf159f78c709aa371",
+  "pins" : [
+    {
+      "identity" : "json",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/finsig/json",
+      "state" : {
+        "revision" : "df1188c7d90aed0433e193c582e4381874f4c854",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "json-rpc2",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/finsig/json-rpc2",
+      "state" : {
+        "revision" : "0b6e501ee3a77355a5dcb309599f4eef38a6c80e",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "smoldot-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/finsig/smoldot-swift",
+      "state" : {
+        "revision" : "8fe67ecb85514cc467854c761d71be5e573794eb",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
