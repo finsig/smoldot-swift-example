@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		705490632C2E44DA00C059F3 /* RPCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705490602C2E44DA00C059F3 /* RPCView.swift */; };
 		705490642C2E44DA00C059F3 /* ChainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705490612C2E44DA00C059F3 /* ChainListView.swift */; };
 		705490652C2E44DA00C059F3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705490622C2E44DA00C059F3 /* Model.swift */; };
-		705490682C2E452500C059F3 /* SmoldotSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 705490672C2E452500C059F3 /* SmoldotSwift */; };
+		70BF87582C308A1C00F45B51 /* SmoldotSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 70BF87572C308A1C00F45B51 /* SmoldotSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				705490682C2E452500C059F3 /* SmoldotSwift in Frameworks */,
+				70BF87582C308A1C00F45B51 /* SmoldotSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			);
 			name = SmoldotSwiftExample;
 			packageProductDependencies = (
-				705490672C2E452500C059F3 /* SmoldotSwift */,
+				70BF87572C308A1C00F45B51 /* SmoldotSwift */,
 			);
 			productName = SmoldotSwiftExample;
 			productReference = 7054904E2C2E444800C059F3 /* SmoldotSwiftExample.app */;
@@ -125,7 +125,7 @@
 			);
 			mainGroup = 705490452C2E444800C059F3;
 			packageReferences = (
-				705490662C2E452500C059F3 /* XCRemoteSwiftPackageReference "smoldot-swift" */,
+				70BF87562C308A1C00F45B51 /* XCLocalSwiftPackageReference "checkouts/smoldot-swift" */,
 			);
 			productRefGroup = 7054904F2C2E444800C059F3 /* Products */;
 			projectDirPath = "";
@@ -376,21 +376,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		705490662C2E452500C059F3 /* XCRemoteSwiftPackageReference "smoldot-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/finsig/smoldot-swift";
-			requirement = {
-				kind = exactVersion;
-				version = 0.1.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		70BF87562C308A1C00F45B51 /* XCLocalSwiftPackageReference "checkouts/smoldot-swift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "checkouts/smoldot-swift";
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		705490672C2E452500C059F3 /* SmoldotSwift */ = {
+		70BF87572C308A1C00F45B51 /* SmoldotSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 705490662C2E452500C059F3 /* XCRemoteSwiftPackageReference "smoldot-swift" */;
 			productName = SmoldotSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

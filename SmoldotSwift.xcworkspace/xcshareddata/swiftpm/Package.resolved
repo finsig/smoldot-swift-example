@@ -1,0 +1,24 @@
+{
+  "originHash" : "d8b9ff844a92d6ed69683a59d650dca08fcf43f06ace0080d1bc2984066e4e54",
+  "pins" : [
+    {
+      "identity" : "json",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/finsig/json",
+      "state" : {
+        "revision" : "df1188c7d90aed0433e193c582e4381874f4c854",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "json-rpc2",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/finsig/json-rpc2",
+      "state" : {
+        "revision" : "0b6e501ee3a77355a5dcb309599f4eef38a6c80e",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}

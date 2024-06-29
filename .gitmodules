@@ -1,0 +1,3 @@
+[submodule "checkouts/smoldot-swift"]
+	path = checkouts/smoldot-swift
+	url = https://github.com/finsig/smoldot-swift
