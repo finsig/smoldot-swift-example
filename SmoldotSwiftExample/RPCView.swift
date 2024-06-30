@@ -25,15 +25,17 @@ struct RPCView: View {
             ScrollView {
                 ForEach(model.session, id: \.string) { message in
                     Divider()
-                    Text(String(describing: message.type))
+                    Text(String(describing: message.type) + " - " + String(describing: message.timestamp))
                         .foregroundStyle(.primary)
                         .font(.footnote)
                         .italic()
+                        .padding(.bottom)
                     Text(message.string)
                         .foregroundStyle(.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading)
                         .padding(.trailing)
+                        .padding(.bottom)
                 }
             }
             .defaultScrollAnchor(.bottom)

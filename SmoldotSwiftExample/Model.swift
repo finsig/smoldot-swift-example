@@ -57,6 +57,7 @@ class Model: ObservableObject {
 struct Message {
     var string: String
     var `type`: Type
+    let timestamp = Date()
     
     enum `Type`: CustomStringConvertible {
         case request
