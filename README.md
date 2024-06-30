@@ -13,33 +13,31 @@ A shell script is provided to build the XCFramework from the Rust FFI code.
 ## Usage
 
 Clone the repo to your local machine.
-```zsh
-> git clone https://github.com/finsig/smoldot-swift-example
-```
-Run submodule update to checkout the package workspace inside the repo.
 
 ```zsh
-> git submodule update –init –recursive
+$ git clone --recurse-submodules https://github.com/finsig/smoldot-swift-example
 ```
 
 Run the shell script to build, copy, and link the xcframework to the example app project.
 
 ```zsh
-> zsh build_xcframework.sh dev
+$ cd smoldot-swift-example
+$ zsh build_submodule.sh
 ```
 
 ## Shell Script
 
-The shell script checks out the [Smoldot C FFI](https://github.com/finsig/smoldot-c-ffi) Rust repository to:
+The shell script updates the Smoldot Swift submodule to the head of the main branch and builds the XCframework for use in the Smoldot Swift Example project.
+
+During this time the [Smoldot C FFI](https://github.com/finsig/smoldot-c-ffi) Rust repository is checked out to:
+
 ```zsh
 .build/checkouts/smoldot-c-ffi
 ```
 
-It then builds static C language binary archives for the iOS, Simulator, and MacOS architectures.
+After building static C language binary archive files an xcframework is built and copied into the package. The package settings are modified to use the newly built file as a binary target.
 
-An XCode framework is built from the static libraries. 
 
-The framework is copied into the package and the package is configured to use the local file as a binary target.
 
 ## Notes
 
@@ -57,4 +55,4 @@ RUST_LOG=info
 IDEPreferLogStreaming=YES
 ```
 
-See [issues](https://github.com/finsig/smoldot-swift/issues) regarding console pane spam messages.
+See [GitHub Issues](https://github.com/finsig/smoldot-swift/issues) regarding console pane log noise.
