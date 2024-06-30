@@ -50,11 +50,11 @@ Incoming and outgoing Network Connections are enabled for the MacOS App Sandbox 
 Environment variables set in scheme settings:
 
 ```zsh
-RUST_LOG = info
+RUST_LOG=info
 ```
 
 ```zsh
-IDEPreferLogStreaming = YES
+IDEPreferLogStreaming=YES
 ```
 
 See [issues](https://github.com/finsig/smoldot-swift/issues) regarding console pane spam messages.
