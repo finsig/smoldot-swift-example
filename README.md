@@ -55,4 +55,4 @@ IDEPreferLogStreaming=YES
 
 ## Issues
 
-See [GitHub issues](https://github.com/finsig/smoldot-swift/issues) regarding log noise.
+See [GitHub issues](https://github.com/finsig/smoldot-swift-example/issues) regarding log noise.
