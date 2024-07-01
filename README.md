@@ -37,8 +37,6 @@ During this time the [Smoldot C FFI](https://github.com/finsig/smoldot-c-ffi) Ru
 
 After building static C language binary archive files an xcframework is built and copied into the package. The package settings are modified to use the newly built file as a binary target.
 
-
-
 ## Notes
 
 Incoming and outgoing Network Connections are enabled for the MacOS App Sandbox in XCode.
@@ -55,4 +53,6 @@ RUST_LOG=info
 IDEPreferLogStreaming=YES
 ```
 
-See [GitHub Issues](https://github.com/finsig/smoldot-swift/issues) regarding console pane log noise.
+## Issues
+
+See [GitHub issues](https://github.com/finsig/smoldot-swift/issues) regarding log noise.
