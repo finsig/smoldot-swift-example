@@ -32,7 +32,7 @@ The shell script updates the Smoldot Swift submodule to the head of the main bra
 During this time the [Smoldot C FFI](https://github.com/finsig/smoldot-c-ffi) Rust repository is checked out to:
 
 ```zsh
-.build/checkouts/smoldot-c-ffi
+/checkouts/smoldot-swift/.build/checkouts/smoldot-c-ffi
 ```
 
 After building static C language binary archive files an xcframework is built and copied into the package. The package settings are modified to use the newly built file as a binary target.
