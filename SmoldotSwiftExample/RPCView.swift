@@ -15,6 +15,7 @@ struct RPCView: View {
     @State private var request: String = .empty
     @State private var runtimeErrorMessage: String = .empty
     @State private var showingAlert = false
+    @State private var isChainConnected = false
     
     init(chain: Chain) {
         _model = StateObject(wrappedValue: Model(chain: chain))
@@ -49,6 +50,7 @@ struct RPCView: View {
                         } label: {
                             Image(systemName: "trash")
                         }
+                        .disabled(!isChainConnected)
                     }
                 #else
                     ToolbarItem(placement: .primaryAction) {
@@ -57,15 +59,17 @@ struct RPCView: View {
                         } label: {
                             Image(systemName: "trash")
                         }
+                        .disabled(!isChainConnected)
                     }
                 #endif
             }
             
             HStack {
-                RequestMenuView(request: $request)
+                RequestMenuView(request: $request, isChainConnected: $isChainConnected)
                 
                 TextField(text: $request, prompt: Text("JSON-RPC2 Request String"), label: { Text(verbatim: .empty) })
                     .textFieldStyle(.roundedBorder)
+                    .disabled(!isChainConnected)
                 
                 if request.count > .zero {
                     Button {
@@ -88,12 +92,16 @@ struct RPCView: View {
             .padding()
         }
         .onAppear(perform: {
-            do {
-                try model.connect()
-            }
-            catch {
-                runtimeErrorMessage = String(describing: error)
-                showingAlert.toggle()
+            Task {
+                print("connecting to \(model.chain.specification.name)")
+                do {
+                    try model.connect()
+                }
+                catch {
+                    runtimeErrorMessage = String(describing: error)
+                    showingAlert.toggle()
+                }
+                isChainConnected = true
             }
         })
         .onDisappear(perform: {
@@ -110,6 +118,16 @@ struct RPCView: View {
                 runtimeErrorMessage = String(describing: error)
             }
         }
+        .overlay {
+            if !isChainConnected {
+                HStack {
+                    ProgressView()
+                    Text("Connecting to \(model.chain.specification.name)...")
+                        .font(.footnote)
+                        .padding()
+                }
+            }
+        }
     }
     
 }
@@ -118,6 +136,7 @@ struct RPCView: View {
 fileprivate struct RequestMenuView: View {
     
     @Binding var request: String
+    @Binding var isChainConnected: Bool
     
     @State private var identifier: Int = .zero
     
@@ -135,7 +154,7 @@ fileprivate struct RequestMenuView: View {
             #if os(iOS)
                 Image(systemName: "plus.circle.fill")
                     .resizable()
-                    .foregroundStyle(.white, .polkadotPink)
+                    .foregroundStyle(.white, (!isChainConnected ? .gray : .polkadotPink) )
                     .frame(width: 44.0, height: 44.0)
             #else
                 Label("Requests", systemImage: "plus.circle.fill")
@@ -162,6 +181,7 @@ fileprivate struct RequestMenuView: View {
             Button("OK", action: buildRequest)
             Button("Cancel", role: .cancel) { }
         }
+        .disabled(!isChainConnected)
     }
     
     func buildRequest() {
