@@ -9,17 +9,10 @@ import SwiftUI
 import SmoldotSwift
 
 struct ChainListView: View {
-    
-    let chains: [Chain] = [
-        .polkadot,
-        .kusama,
-        .rococo,
-        .westend
-    ]
-   
+
     var body: some View {
         NavigationStack {
-            List(chains, id: \.specification.name) { chain in
+            List(Model.chains, id: \.specification.name) { chain in
                 NavigationLink(chain.specification.name, value: chain)
             }
             .navigationDestination(for: Chain.self) { chain in

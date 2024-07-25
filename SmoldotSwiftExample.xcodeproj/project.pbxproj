@@ -14,6 +14,10 @@
 		705490642C2E44DA00C059F3 /* ChainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705490612C2E44DA00C059F3 /* ChainListView.swift */; };
 		705490652C2E44DA00C059F3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705490622C2E44DA00C059F3 /* Model.swift */; };
 		70BF87582C308A1C00F45B51 /* SmoldotSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 70BF87572C308A1C00F45B51 /* SmoldotSwift */; };
+		70D6C7382C50B4C5000F3F4B /* polkadot.json in Resources */ = {isa = PBXBuildFile; fileRef = 70D6C7342C50B4C5000F3F4B /* polkadot.json */; };
+		70D6C7392C50B4C5000F3F4B /* westend.json in Resources */ = {isa = PBXBuildFile; fileRef = 70D6C7352C50B4C5000F3F4B /* westend.json */; };
+		70D6C73A2C50B4C5000F3F4B /* kusama.json in Resources */ = {isa = PBXBuildFile; fileRef = 70D6C7362C50B4C5000F3F4B /* kusama.json */; };
+		70D6C73B2C50B4C5000F3F4B /* rococo.json in Resources */ = {isa = PBXBuildFile; fileRef = 70D6C7372C50B4C5000F3F4B /* rococo.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		705490602C2E44DA00C059F3 /* RPCView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPCView.swift; sourceTree = "<group>"; };
 		705490612C2E44DA00C059F3 /* ChainListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainListView.swift; sourceTree = "<group>"; };
 		705490622C2E44DA00C059F3 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		70D6C7342C50B4C5000F3F4B /* polkadot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = polkadot.json; sourceTree = "<group>"; };
+		70D6C7352C50B4C5000F3F4B /* westend.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = westend.json; sourceTree = "<group>"; };
+		70D6C7362C50B4C5000F3F4B /* kusama.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kusama.json; sourceTree = "<group>"; };
+		70D6C7372C50B4C5000F3F4B /* rococo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rococo.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 				705490602C2E44DA00C059F3 /* RPCView.swift */,
 				705490552C2E444900C059F3 /* Assets.xcassets */,
 				705490572C2E444900C059F3 /* SmoldotSwiftExample.entitlements */,
+				70D6C7332C50B49D000F3F4B /* Resources */,
 				705490582C2E444900C059F3 /* Preview Content */,
 			);
 			path = SmoldotSwiftExample;
@@ -75,6 +84,17 @@
 				705490592C2E444900C059F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		70D6C7332C50B49D000F3F4B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70D6C7362C50B4C5000F3F4B /* kusama.json */,
+				70D6C7342C50B4C5000F3F4B /* polkadot.json */,
+				70D6C7372C50B4C5000F3F4B /* rococo.json */,
+				70D6C7352C50B4C5000F3F4B /* westend.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +162,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7054905A2C2E444900C059F3 /* Preview Assets.xcassets in Resources */,
+				70D6C73A2C50B4C5000F3F4B /* kusama.json in Resources */,
+				70D6C73B2C50B4C5000F3F4B /* rococo.json in Resources */,
 				705490562C2E444900C059F3 /* Assets.xcassets in Resources */,
+				70D6C7392C50B4C5000F3F4B /* westend.json in Resources */,
+				70D6C7382C50B4C5000F3F4B /* polkadot.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
