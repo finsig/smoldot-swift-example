@@ -10,10 +10,16 @@ import SmoldotSwift
 
 class Model: ObservableObject {
 
+    // - Important: Chain specification files provided for demonstration purposes only.
+    static var chains = ["polkadot","kusama","rococo","westend"].map({
+        let url = Bundle.main.url(forResource: $0, withExtension: "json")!
+        return try! Chain(specificationFile: url)
+    })
+    
     @Published var session = [Message]()
     
     var chain: Chain
-
+    
     init(chain: Chain) {
         self.chain = chain
     }
